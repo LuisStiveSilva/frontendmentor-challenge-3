@@ -1,0 +1,143 @@
+@import "mixins";
+
+.card {
+  display: flex;
+  flex-direction: column;
+  margin: 14rem 2.4rem;
+  background-color: white;
+  background-image: url(/images/bg-pattern-mobile.svg);
+  background-repeat: no-repeat;
+  background-position: top center;
+  border-radius: 20px;
+
+  @include desktop {
+    position: relative;
+    max-width: 90rem;
+    background-image: url(/images/bg-pattern-desktop.svg);
+    background-size: 90%;
+    background-repeat: no-repeat;
+    background-position: -539% 68%;
+    margin: 12rem auto;
+    flex-direction: row;
+  }
+  &__image {
+    flex: 1;
+    @include desktop {
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+    }
+    &__desktop {
+      display: none;
+      @include desktop {
+        display: inline;
+        width: 100%;
+        height: auto;
+        transform: translateX(-8rem);
+      }
+      &__box {
+        display: none;
+        @include desktop {
+          display: block;
+          position: absolute;
+          z-index: 1;
+          left: 0;
+          top: 50%;
+          transform: translateX(-48.5%) translateY(-25%);
+        }
+      }
+    }
+    &__mobile {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-55%) translateY(16%);
+      @include desktop {
+        display: none;
+      }
+    }
+  }
+  &__text {
+    flex: 1;
+    padding-bottom: 5rem;
+    @include desktop {
+      padding-bottom: 7rem;
+      padding-right: 9rem;
+    }
+    h1 {
+      font-size: 2.5rem;
+      text-align: center;
+      margin-top: 13rem;
+      @include desktop {
+        text-align: start;
+        margin-top: 7rem;
+        margin-left: 2.5rem;
+      }
+    }
+    @include desktop {
+      width: 92rem;
+    }
+  }
+}
+
+.accordion {
+  color: $darkGrayishBlue;
+  &__item {
+    display: flex;
+    flex-direction: column;
+    margin: 0 25px;
+    border-bottom: 1px solid $lightGrayishBlue;
+  }
+
+  &__button {
+    display: block;
+    color: $veryDarkGrayishBlue;
+    text-align: start;
+    padding: 17px 0;
+    border: none;
+    background: transparent;
+    font-family: "Kumbh Sans", sans-serif;
+    &.open {
+      font-weight: 700;
+      color: $veryDarkDesaturatedBlue;
+      &::after {
+        transform: rotate(180deg);
+      }
+    }
+    &:hover {
+      color: $softRed;
+      cursor: pointer;
+    }
+    &:focus {
+      outline: none;
+    }
+    &::after {
+      content: url(/images/icon-arrow-down.svg);
+      display: block;
+      float: right;
+      transition: 300ms ease-in-out;
+      @include desktop {
+        padding-right: 1.5rem;
+      }
+    }
+  }
+
+  &__content {
+    line-height: 1.7;
+    padding-bottom: 1.7rem;
+    text-align: start;
+  }
+  &__collapse {
+    transition: height 300ms ease;
+    &.collapse {
+      display: none;
+    }
+    &.collapsing {
+      height: 0;
+      overflow: hidden;
+    }
+    &.open {
+      display: block;
+    }
+  }
+}
