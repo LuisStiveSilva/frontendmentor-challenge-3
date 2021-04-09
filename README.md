@@ -41,8 +41,8 @@ Desktop
 
 ### Links
 
-- [Solution URL](https://your-solution-url.com)
-- [Live Site URL](https://your-live-site-url.com)
+- [Solution URL](https://github.com/LuisStiveSilva/frontendmentor-challenge-3)
+- [Live Site URL](https://luisstivesilva.github.io/frontendmentor-challenge-3/)
 
 ## My process
 
