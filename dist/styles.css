@@ -40,7 +40,7 @@ body {
           flex-direction: column;
   margin: 14rem 2.4rem;
   background-color: white;
-  background-image: url(/images/bg-pattern-mobile.svg);
+  background-image: url(../images/bg-pattern-mobile.svg);
   background-repeat: no-repeat;
   background-position: top center;
   border-radius: 20px;
@@ -50,7 +50,7 @@ body {
   .card {
     position: relative;
     max-width: 90rem;
-    background-image: url(/images/bg-pattern-desktop.svg);
+    background-image: url(../images/bg-pattern-desktop.svg);
     background-size: 90%;
     background-repeat: no-repeat;
     background-position: -539% 68%;
@@ -204,7 +204,7 @@ body {
 }
 
 .accordion__button::after {
-  content: url(/images/icon-arrow-down.svg);
+  content: url(../images/icon-arrow-down.svg);
   display: block;
   float: right;
   -webkit-transition: 300ms ease-in-out;
