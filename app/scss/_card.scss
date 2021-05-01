@@ -3,22 +3,25 @@
 .card {
   display: flex;
   flex-direction: column;
-  margin: 14rem 2.4rem;
+  margin: auto;
+  margin-top: 140px;
   background-color: white;
   background-image: url(../images/bg-pattern-mobile.svg);
   background-repeat: no-repeat;
   background-position: top center;
   border-radius: 20px;
+  width: 327px;
 
   @include desktop {
     position: relative;
-    max-width: 90rem;
+    width: 920px;
     background-image: url(../images/bg-pattern-desktop.svg);
     background-size: 90%;
     background-repeat: no-repeat;
     background-position: -539% 68%;
-    margin: 12rem auto;
     flex-direction: row;
+    margin: 0 auto;
+    margin-top: 120px;
   }
   &__image {
     flex: 1;
